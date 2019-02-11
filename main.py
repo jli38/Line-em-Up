@@ -1,41 +1,45 @@
 from display import *
 from draw import *
+from subprocess import Popen, PIPE
+import random
 
 screen = new_screen()
 color = [ 255, 255, 0 ]
 
+for i in range(0,500,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( i, 0, i, 500, screen, color)
 
-# Q1
-draw_line(0, 0, 250, 0, screen, color)
-draw_line(0, 0, 250, 250, screen, color)
-draw_line(0, 0, 250, 100, screen, color)
+for i in range(0,500,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( 0, i, 500, i, screen, color)
 
-# Q2
-draw_line(0, 0, 0, 250, screen, color)
-draw_line(0, 0, 250, 350, screen, color)
 
-# Q3
-draw_line(-250, 350, 0, 0, screen, color)
+######
+for i in range(0,1000,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( 0, i, i, 0, screen, color)
 
-# Q4
-draw_line(-250, 0, 0, 0, screen, color)
-draw_line(-250, 250, 0, 0, screen, color)
-draw_line(-250, 100, 0, 0, screen, color)
+for i in range(0,1000,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( 0, i, (i+random.randrange(100))*2, 0, screen, color)
 
-# Q5
-draw_line(-250, -100, 0, 0, screen, color)
-draw_line(-250, -250, 0, 0, screen, color)
+for i in range(0,1000,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( 0, i, (i-random.randrange(100))*0.5 , 0, screen, color)
 
-# Q6
-draw_line(-250, -350, 0, 0, screen, color)
-draw_line(0, -250, 0, 0, screen, color)
+######
+for i in range(0,1000,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( 0, 500-i, i, 500, screen, color)
 
-# Q7 
-draw_line(0, 0, 250, 350, screen, color)
+for i in range(0,1000,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+    draw_line( 0, 500-i, (i+random.randrange(100))*2, 500, screen, color)
 
-# Q8
-draw_line(0, 0, 250, -250, screen, color)
-draw_line(0, 0, 250, -100, screen, color)
+for i in range(0,1000,100):
+    color = [ (i+random.randrange(100)%256), (i+random.randrange(100))%256, (i+random.randrange(100))%256]
+draw_line( 0, 500-i, (i-random.randrange(100))*0.5 , 500, screen, color)
 
 
 display(screen)
