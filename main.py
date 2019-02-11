@@ -1,14 +1,18 @@
 from display import *
 from draw import *
+import random
 
 screen = new_screen()
 color = [ 255, 255, 0 ]
 
+ran = random.randint(0, 255)
 
-draw_line(50, 300, 200, 300, screen, [0, 255, 255])
-draw_line(50, 100, 200, 100, screen, [0, 255, 255])
-draw_line(50, 100, 200, 300, screen, [0, 255, 255])
-draw_line(50, 200, 200, 200, screen, [0, 255, 255])
+draw_line(ran, ran, ran, ran, screen, [ran, ran, ran])
+draw_line(ran, ran, ran, ran, screen, [ran, ran, ran])
+draw_line(ran, ran, ran, ran, screen, [ran, ran, ran])
+draw_line(ran, ran, ran, ran, screen, [ran, ran, ran])
+draw_line(ran, ran, ran, ran, screen, [ran, ran, ran])
+
 
 
 display(screen)
