@@ -5,12 +5,16 @@ import random
 screen = new_screen()
 color = [ 255, 255, 0 ]
 
+def randy():
+    ran = random.randint(0, 500)
+    return ran
 
-draw_line(random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), screen, [random.randint(0, 500) % 256, random.randint(0, 500) % 256, random.randint(0, 500) % 256])
-draw_line(random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), screen, [random.randint(0, 500) % 256, random.randint(0, 500) % 256, random.randint(0, 500) % 256])
-draw_line(random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), screen, [random.randint(0, 500) % 256, random.randint(0, 500) % 256, random.randint(0, 500) % 256])
-draw_line(random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), screen, [random.randint(0, 500) % 256, random.randint(0, 500) % 256, random.randint(0, 500) % 256])
-draw_line(random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), random.randint(0, 500), screen, [random.randint(0, 500) % 256, random.randint(0, 500) % 256, random.randint(0, 500) % 256])
+draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+
 
 
 display(screen)
