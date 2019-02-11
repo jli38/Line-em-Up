@@ -9,11 +9,10 @@ def randy():
     ran = random.randint(0, 500)
     return ran
 
-draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
-draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
-draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
-draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
-draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+for x in range(0, 101):
+    
+    draw_line(randy(), randy(), randy(), randy(), screen, [randy() % 256, randy() % 256, randy() % 256])
+    
 
 
 
